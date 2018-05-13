@@ -3,10 +3,28 @@ import AppPresenter from "./AppPresenter";
 import Store from "store";
 
 class AppContainer extends Component {
-  state = {
-    message: "Hello",
-    stuff: "10"
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      notifications: {
+        "1": {
+          id: 1,
+          text: "Something..",
+          seen: false
+        },
+        "2": {
+          id: 2,
+          text: "Something Else",
+          seen: false
+        },
+        "3": {
+          id: 3,
+          text: "Something else but Different",
+          seen: false
+        }
+      }
+    };
+  }
 
   render() {
     return (
